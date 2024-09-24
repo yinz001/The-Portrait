@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Novel Game</title>
+    <link rel="stylesheet" href="css/Nyx.css">
+</head>
+<body>
+    <audio id="click-sound" src="sounds/Nyxbackground.wav" preload="auto"></audio>
+    <div id="game-container">
+        <div id="background"></div>
+        <div id="sprite-container">
+        <div id="character"></div>
+    </div>
+        <div id="dialogue-box">
+            <p id="dialogue-text"></p>
+            <div id="choices"></div>
+         
+        </div>
+    </div>
+    
+    <audio id="click-sound" src="sounds/click.wav" preload="auto"></audio>
+	<audio id="hover-sound" src="sounds/hover.wav" preload="auto"></audio>
+    <canvas id="mouse-trail"></canvas>
+    <script src="js/script.js"></script>
+</body>
+</html>

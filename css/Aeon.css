@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Sky blue background */
+    overflow: hidden;
+}
+
+
+
+.background {
+    position: absolute;
+    width: 3000%;
+    height: 100%;
+    background-color: black;
+    /*background-image: url('../images/Background.png'); /* Replace with your image */
+    background-repeat: repeat-x;
+    animation: scrollBackground 10s linear infinite;
+}
+
+@keyframes scrollBackground {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.player {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    bottom: 0;
+    left: 50px;
+    object-fit: contain; /* Ensure the GIF fits within its container */
+z-index: 4;
+}
+
+.transition-overlay {
+    position: absolute;
+    width: 1980px;
+    height: 1082px;
+    background-color: #6037c2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+.flashlight {
+    
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.1) 70%, rgba(0,0,0,0) 100%);
+    pointer-events: none; /* Allow clicks to pass through */
+    animation: flicker 0.1s infinite alternate;
+    z-index: 2;
+}
+
+@keyframes flicker {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+.text {
+    position: absolute;
+    width: 3000px;
+    height: 1082px;
+    
+    background-image: url('../images/text.png');
+    bottom: 0;
+    left: 900px; /* Position the obstacle */
+    z-index: 3;
+}
+
+.tree {
+    position: absolute;
+    width: 3000px;
+    height: 1082px;
+    
+    background-image: url('../images/tree.png');
+    bottom: 0;
+    left: 900px; /* Position the obstacle */
+    z-index: 1;
+}
+
+.architect {
+    position: absolute;
+    width: 3000px;
+    height: 1082px;
+    
+    background-image: url('../images/fieldofblades.png');
+    bottom: 0;
+    left: 900px; /* Position the obstacle */
+    z-index: 3;
+}
